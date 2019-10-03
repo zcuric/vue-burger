@@ -2,11 +2,12 @@
   <div id="app">
     <header>
       <img src="./assets/burger.svg" />
-      <h1>Vue Burger</h1>
+      <h1 :class="{ 'bold': isActive }">Vue Burger</h1>
     </header>
     <main class="container">
       <template v-for="burger in burgers">
         <v-burger 
+          v-bind:active.sync="isActive"
           :type="burger" 
           :key="burger" 
           :burgerStyle="style">
@@ -27,7 +28,6 @@
 </template>
 
 <script>
-import randomColor from 'randomcolor';
 const burgers = [
   "3dx",
   "3dx-r",
@@ -66,14 +66,12 @@ export default {
   name: 'app',
   data() {
     return {
+      isActive: false,
       burgers,
       style: {
         "--padding": "30px",
       }
     }
-  },
-  methods: {
-    randomColor
   }
 }
 </script>
@@ -96,6 +94,10 @@ header {
 }
 header img {
   max-height: 100px;
+}
+
+.bold {
+  font-weight: 900;
 }
 
 .container {

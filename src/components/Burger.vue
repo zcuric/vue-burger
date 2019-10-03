@@ -6,7 +6,7 @@
     :aria-controls="ariaControls"
     :aria-expanded="isActive"
     :tabindex="tabIndex"
-    @click="isActive = !isActive"
+    @click="activate"
     class="hamburger" 
     type="button"
   >
@@ -35,6 +35,12 @@ export default {
   computed: {
     burger() {
       return `hamburger--${this.type}`;
+    }
+  },
+  methods: {
+    activate() {
+      this.isActive = !this.isActive;
+      this.$emit('update:active', this.isActive);
     }
   }
 }
