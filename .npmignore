@@ -3,3 +3,4 @@
 .git*
 .npmignore
 public/
+example/
