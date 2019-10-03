@@ -119,14 +119,17 @@ You can see all the types in actions on official documentation for [Hamburgers](
 
 For styling regular CSS variables are used. Variables are defined 
 in `burgerStyle` prop. Available variables:
-- `--padding` - padding of the hamburger box, **default**: 15px
-- `--bg-color` - hamburger background color, **default**: transparent
-- `--box-width` - hamburger box width, **default**: 40px;
-- `--box-height` - hamburger box height, **default**: 24px;
-- `--layer-width` - width of each hamburger layer, **default**: 40px;
-- `--layer-height` - width of each hamburger layer, **default**: 4px
-- `--layer-bg-color` - layer background color, **default**: #000000
-- `--active-layer-bg-color` - layer background color when in active state, **default**: `--layer-bg-color`
+
+| Variable | Description | Default value |
+| --- | --- | --- |
+| `--padding` | padding of the hamburger box | 15px
+| `--bg-color` | hamburger background color | transparent
+| `--box-width` | hamburger box width | 40px
+| `--box-height` | hamburger box height | 24px
+| `--layer-width` | width of each hamburger layer | 40px
+| `--layer-height` | width of each hamburger layer | 4px
+| `--layer-bg-color` | layer background color | #000000
+| `--active-layer-bg-color` | layer background color when in active state | `--layer-bg-color`
 
 Example: 
 ```vue
@@ -153,5 +156,33 @@ Example:
 </script>
 ```
 
+### Events
+
+Burger components emits `update:active` event that exposes the active state. It fires after the burger button is clicked. Check the [example](https://github.com/zcuric/vue-burger/blob/master/example/App.vue) for usage.
+
+| Event | Description | Params |
+| --- | --- | --- |
+| `update:active` | fired after the burger button is clicked | active (Boolean) |
+
 Icon made by  [Freepik](https://www.flaticon.com/authors/freepik) from [flaticon](https://www.flaticon.com/).
-    
+
+## Development
+
+```
+# Running examples
+yarn serve
+
+# Running tests
+yarn test
+
+# Running build
+yarn build
+```
+
+## Contributing
+
+All contributions are welcome.
+
+## License
+
+MIT @ Zdravko Ćurić [(zcuric)](https://github.com/zcuric)
