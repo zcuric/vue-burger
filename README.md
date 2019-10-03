@@ -53,10 +53,7 @@ export default {
 
 ```vue
 <template>
-  <v-burger 
-    :type="arrow" 
-    :burgerStyle="style">
-  </v-burger>
+  <v-burger :type="arrow" />
 </template>
 ```
 
@@ -154,6 +151,23 @@ Example:
     }
   }
 </script>
+```
+
+### Slots 
+Burger has one named slot for setting label for accessability [as suggested by Hamburgers author.](https://github.com/jonsuh/hamburgers#accessibility)
+
+| Slot | Description |
+| --- | --- |
+| `label` | label for a11y |
+
+Example: 
+
+```vue
+  <v-burger>
+    <template v-slot:label>
+      <span class="hamburger-label">Menu</span>
+    </template>
+  </v-burger>
 ```
 
 ### Events
