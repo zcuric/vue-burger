@@ -184,13 +184,13 @@ Icon made by  [Freepik](https://www.flaticon.com/authors/freepik) from [flaticon
 
 ```
 # Running examples
-yarn serve
+npm run serve
 
 # Running tests
-yarn test
+npm run test
 
 # Running build
-yarn build
+npm run build
 ```
 
 ## Contributing

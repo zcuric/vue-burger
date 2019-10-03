@@ -14,9 +14,9 @@
     "hamburgers": "^1.1.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.0.0",
-    "@vue/cli-plugin-eslint": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
+    "@vue/cli-plugin-babel": "next",
+    "@vue/cli-plugin-eslint": "next",
+    "@vue/cli-service": "next",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
