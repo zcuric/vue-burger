@@ -1,14 +1,20 @@
 {
   "name": "vue-burger",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "main": "dist/vue-burger.js",
+  "description": "Vue.js component/plugin for Hamburgers - Tasty CSS-animated hamburgers",
+  "author": {
+    "name": "Zdravko Ćurić",
+    "url": "https://github.com/zcuric"
+  },
   "scripts": {
     "serve": "vue-cli-service serve ./example/main.js",
-    "build": "vue-cli-service build ./src/index.js",
+    "build": "bili",
     "test": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "build:example": "vue-cli-service build ./example/main.js --dest ./example/dist",
-    "prepare": "npm run build",
-    "publish": "npx np"
+    "prebuild": "rimraf dist",
+    "prepare": "npm run build"
   },
   "files": [
     "dist/css",
@@ -25,8 +31,13 @@
     "@vue/server-test-utils": "^1.0.0-beta.29",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-eslint": "^10.0.1",
+    "bili": "^4.8.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.3.0",
+    "rimraf": "^3.0.0",
+    "rollup-plugin-vue": "4.3.2",
     "vue": "^2.6.10",
     "vue-server-renderer": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
@@ -67,5 +78,16 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue,scss}": [
+      "npm run lint",
+      "git add"
+    ]
+  }
 }
