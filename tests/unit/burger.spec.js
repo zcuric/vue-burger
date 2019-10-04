@@ -1,5 +1,4 @@
 import { shallowMount } from '@vue/test-utils';
-import { render } from '@vue/server-test-utils'
 import Burger from '../../src/components/Burger.vue';
 
 describe('Burger.vue', () => {
@@ -31,15 +30,5 @@ describe('Burger.vue', () => {
     const button = wrapper.find('button');
     button.trigger('click');
     expect(wrapper.emitted('update:active')).toHaveLength(1);
-  });
-
-
-  it('renders named slot', async () => {
-    const wrapper = await render(Burger, {
-      slots: {
-        label: "My Menu"
-      }
-    });
-    expect(wrapper.text()).toContain('My Menu');
   });
 });
