@@ -14,7 +14,8 @@
     "lint": "vue-cli-service lint",
     "build:example": "vue-cli-service build ./example/main.js --dest ./example/dist",
     "prebuild": "rimraf dist",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "publish:ghp": "npm run build:example && git add example/dist && git commit -m 'Publish example' && git subtree push --prefix dist origin gh-pages"
   },
   "files": [
     "dist/css",
