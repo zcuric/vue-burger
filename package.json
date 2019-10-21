@@ -1,6 +1,6 @@
 {
   "name": "vue-burger",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/vue-burger.js",
   "description": "Vue.js component/plugin for Hamburgers - Tasty CSS-animated hamburgers",
   "author": {
