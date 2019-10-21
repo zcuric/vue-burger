@@ -10,7 +10,7 @@
           v-bind:active.sync="isActive"
           :type="burger" 
           :key="burger" 
-          :burgerStyle="style">
+          :burgerStyle="burgerStyle">
             <template v-slot:label>
               <span class="hamburger-label">{{ burger }}</span>
             </template>
@@ -68,7 +68,7 @@ export default {
     return {
       isActive: false,
       burgers,
-      style: {
+      burgerStyle: {
         "--padding": "30px",
       }
     }
