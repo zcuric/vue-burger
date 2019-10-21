@@ -8,7 +8,7 @@
 
 ## About
 
-Vue Burger is a Vue component/plugin that is a wrapper around [Tasty CSS-animated hamburgers](https://github.com/jonsuh/hamburgers), well known css library for hamburger icons. 
+Vue Burger is a Vue component/plugin that is a wrapper around [Tasty CSS-animated hamburgers](https://github.com/jonsuh/hamburgers), wellknown css library for hamburger icons. 
 
 ## Installation
 
@@ -133,7 +133,7 @@ Example:
 <template>
   <v-burger 
     :type="arrow" 
-    :burgerStyle="style">
+    :burgerStyle="burgerStyle">
   </v-burger>
 </template>
 
@@ -144,8 +144,8 @@ Example:
         burgerStyle: {
           '--padding': '10px',
           '--layer-bg-color': 'yellow',
-          '--active-layer-bg-color: '#ABABAB'
-          '--layer-width: '20px'
+          '--active-layer-bg-color': '#ABABAB'
+          '--layer-width': '20px'
         }
       }
     }
@@ -178,7 +178,13 @@ Burger components emits `update:active` event that exposes the active state. It 
 | --- | --- | --- |
 | `update:active` | fired after the burger button is clicked | active (Boolean) |
 
-Icon made by  [Freepik](https://www.flaticon.com/authors/freepik) from [flaticon](https://www.flaticon.com/).
+Example with sync modifier:
+
+```vue
+  <v-burger 
+    v-bind:active.sync="isActive"
+  </v-burger>
+```
 
 ## Development
 
@@ -200,3 +206,5 @@ All contributions are welcome.
 ## License
 
 MIT @ Zdravko Ćurić [(zcuric)](https://github.com/zcuric)
+
+_Icon made by  [Freepik](https://www.flaticon.com/authors/freepik) from [flaticon](https://www.flaticon.com/)._
