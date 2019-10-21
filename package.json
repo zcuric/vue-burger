@@ -25,6 +25,7 @@
     "vue plugin"
   ],
   "scripts": {
+    "chglog": "git-chglog -o CHANGELOG.md",
     "serve": "vue-cli-service serve ./example/main.js",
     "build": "bili",
     "test": "vue-cli-service test:unit",
