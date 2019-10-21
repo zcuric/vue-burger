@@ -46,7 +46,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .hamburger {
   padding: var(--padding, 15px);
   background-color: var(--bg-color, transparent)
@@ -68,6 +68,6 @@ export default {
 .hamburger.is-active .hamburger-inner, 
 .hamburger.is-active .hamburger-inner:after, 
 .hamburger.is-active .hamburger-inner:before {
-  background-color: var(--active-layer-bg-color,var(---layer-bg-color, #000000));
+  background-color: var(--active-layer-bg-color,var(--layer-bg-color, #000000));
 }
 </style>
