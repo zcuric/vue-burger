@@ -53,7 +53,7 @@ export default {
 
 ```vue
 <template>
-  <v-burger :type="arrow" />
+  <v-burger type="arrow" />
 </template>
 ```
 
