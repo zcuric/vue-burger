@@ -144,8 +144,8 @@ Example:
         burgerStyle: {
           '--padding': '10px',
           '--layer-bg-color': 'yellow',
-          '--active-layer-bg-color': '#ABABAB'
-          '--layer-width': '20px'
+          '--active-layer-bg-color': '#ABABAB',
+          '--layer-width': '20px',
         }
       }
     }
