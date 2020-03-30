@@ -124,7 +124,7 @@ in `burgerStyle` prop. Available variables:
 | `--box-width` | hamburger box width | 40px
 | `--box-height` | hamburger box height | 24px
 | `--layer-width` | width of each hamburger layer | 40px
-| `--layer-height` | width of each hamburger layer | 4px
+| `--layer-height` | height of each hamburger layer | 4px
 | `--layer-bg-color` | layer background color | #000000
 | `--active-layer-bg-color` | layer background color when in active state | `--layer-bg-color`
 
