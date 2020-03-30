@@ -16,19 +16,10 @@ describe('Burger.vue', () => {
     expect(wrapper.html()).toContain('hamburger--arrow');
   });
 
-  it('changes Burger active state when clicked ', () => {
-    const wrapper = shallowMount(Burger);
-    const button = wrapper.find('button');
-    button.trigger('click');
-    expect(wrapper.vm.$data.isActive).toBe(true);
-    button.trigger('click');
-    expect(wrapper.vm.$data.isActive).toBe(false);
-  });
-
   it('triggers event when Burger active state is changed', () => {
     const wrapper = shallowMount(Burger);
     const button = wrapper.find('button');
     button.trigger('click');
-    expect(wrapper.emitted('update:active')).toHaveLength(1);
+    expect(wrapper.emitted('updated')).toHaveLength(1);
   });
 });

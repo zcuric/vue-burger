@@ -117,16 +117,16 @@ You can see all the types in actions on official documentation for [Hamburgers](
 For styling regular CSS variables are used. Variables are defined 
 in `burgerStyle` prop. Available variables:
 
-| Variable | Description | Default value |
-| --- | --- | --- |
-| `--padding` | padding of the hamburger box | 15px
-| `--bg-color` | hamburger background color | transparent
-| `--box-width` | hamburger box width | 40px
-| `--box-height` | hamburger box height | 24px
-| `--layer-width` | width of each hamburger layer | 40px
-| `--layer-height` | height of each hamburger layer | 4px
-| `--layer-bg-color` | layer background color | #000000
-| `--active-layer-bg-color` | layer background color when in active state | `--layer-bg-color`
+| Variable                  | Description                                 | Default value      |
+| ------------------------- | ------------------------------------------- | ------------------ |
+| `--padding`               | padding of the hamburger box                | 15px               |
+| `--bg-color`              | hamburger background color                  | transparent        |
+| `--box-width`             | hamburger box width                         | 40px               |
+| `--box-height`            | hamburger box height                        | 24px               |
+| `--layer-width`           | width of each hamburger layer               | 40px               |
+| `--layer-height`          | height of each hamburger layer              | 4px                |
+| `--layer-bg-color`        | layer background color                      | #000000            |
+| `--active-layer-bg-color` | layer background color when in active state | `--layer-bg-color` |
 
 Example: 
 ```vue
@@ -156,8 +156,8 @@ Example:
 ### Slots 
 Burger has one named slot for setting label for accessability [as suggested by Hamburgers author.](https://github.com/jonsuh/hamburgers#accessibility)
 
-| Slot | Description |
-| --- | --- |
+| Slot    | Description    |
+| ------- | -------------- |
 | `label` | label for a11y |
 
 Example: 
@@ -172,17 +172,17 @@ Example:
 
 ### Events
 
-Burger components emits `update:active` event that exposes the active state. It fires after the burger button is clicked. Check the [example](https://github.com/zcuric/vue-burger/blob/master/example/App.vue) for usage.
+Burger components emits `updated` event that exposes the active state. It fires after the burger button is clicked. Check the [example](https://github.com/zcuric/vue-burger/blob/master/example/App.vue) for usage.
 
-| Event | Description | Params |
-| --- | --- | --- |
-| `update:active` | fired after the burger button is clicked | active (Boolean) |
+| Event     | Description                              | Params           |
+| --------- | ---------------------------------------- | ---------------- |
+| `updated` | fired after the burger button is clicked | active (Boolean) |
 
 Example with sync modifier:
 
 ```vue
   <v-burger 
-    v-bind:active.sync="isActive"
+    @update="isActive = $emit
   </v-burger>
 ```
 

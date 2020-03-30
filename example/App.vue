@@ -6,22 +6,24 @@
     </header>
     <main class="container">
       <template v-for="burger in burgers">
-        <v-burger 
-          v-bind:active.sync="isActive"
-          :type="burger" 
-          :key="burger" 
-          :burgerStyle="burgerStyle">
-            <template v-slot:label>
-              <span class="hamburger-label">{{ burger }}</span>
-            </template>
+        <v-burger
+          :active="isActive"
+          @updated="isActive = $event"
+          :type="burger"
+          :key="burger"
+          :burgerStyle="burgerStyle"
+        >
+          <template v-slot:label>
+            <span class="hamburger-label">{{ burger }}</span>
+          </template>
         </v-burger>
       </template>
     </main>
     <footer>
       <div>
-        Icons made by 
-        <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from 
-        <a href="https://www.flaticon.com/"  title="Flaticon">www.flaticon.com</a>
+        Icons made by
+        <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from
+        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
       </div>
     </footer>
   </div>
@@ -60,25 +62,25 @@ const burgers = [
   "squeeze",
   "vortex",
   "vortex-r"
-]
+];
 
 export default {
-  name: 'app',
-  data() {
+  name: "app",
+  data: function() {
     return {
       isActive: false,
       burgers,
       burgerStyle: {
-        "--padding": "30px",
+        "--padding": "30px"
       }
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -111,7 +113,7 @@ header img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #EEE;
+  border: 1px solid #eee;
   border-radius: 3px;
   width: 150px;
   height: 140px;
