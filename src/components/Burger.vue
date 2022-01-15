@@ -33,21 +33,21 @@ export default {
 
 <style>
 .hamburger {
-  padding: var(--padding, 15px);
-  background-color: var(--bg-color, transparent);
+  padding: var(--padding, 15px) !important;
+  background-color: var(--bg-color, transparent) !important;
 }
 
 .hamburger-box {
-  width: var(--box-width, 40px);
-  height: var(--box-height, 24px);
+  width: var(--box-width, 40px) !important;
+  height: var(--box-height, 24px) !important;
 }
 
 .hamburger-inner,
 .hamburger-inner:after,
 .hamburger-inner:before {
-  background-color: var(--layer-bg-color, #000000);
-  width: var(--layer-width, 40px);
-  height: var(--layer-height, 4px);
+  background-color: var(--layer-bg-color, #000000) !important;
+  width: var(--layer-width, 40px) !important;
+  height: var(--layer-height, 4px) !important;
 }
 
 .hamburger.is-active .hamburger-inner,
@@ -56,6 +56,6 @@ export default {
   background-color: var(
     --active-layer-bg-color,
     var(--layer-bg-color, #000000)
-  );
+  ) !important;
 }
 </style>
